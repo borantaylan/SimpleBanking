@@ -8,7 +8,7 @@ namespace Banking.WebAPI.Commands
     public class DeleteAllAccountsCommand : IRequest
     {
         /// <summary>
-        /// Constructor having AccountNumber of the account
+        /// Constructor having Identifier of the account
         /// </summary>
         public DeleteAllAccountsCommand(Guid userId)
         {
@@ -16,7 +16,7 @@ namespace Banking.WebAPI.Commands
         }
 
         /// <summary>
-        /// AccountNumber of the account
+        /// Identifier of the account
         /// </summary>
         public Guid UserId { get; }
     }

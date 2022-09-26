@@ -13,7 +13,7 @@ namespace Banking.Storage
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>()
-                .HasIndex(account => account.AccountNumber)
+                .HasIndex(account => account.Identifier)
                 .IsUnique();
 
             modelBuilder.Entity<Account>()

@@ -24,7 +24,7 @@ namespace Banking.Storage
         /// <inheritdoc/>
         public async Task Delete(string accountNumber)
         {
-            var account = await accountContext.Accounts.SingleOrDefaultAsync(x => x.AccountNumber == accountNumber);
+            var account = await accountContext.Accounts.SingleOrDefaultAsync(x => x.Identifier == accountNumber);
             if(account == null)
             {
                 throw new EntityNotFoundException();
@@ -46,7 +46,7 @@ namespace Banking.Storage
         /// <inheritdoc/>
         public async Task<Account> FindByAccountNumber(string accountNumber)
         {
-            var account = await accountContext.Accounts.SingleOrDefaultAsync(x => x.AccountNumber == accountNumber);
+            var account = await accountContext.Accounts.SingleOrDefaultAsync(x => x.Identifier == accountNumber);
             if (account == null)
             {
                 throw new EntityNotFoundException();
@@ -72,17 +72,17 @@ namespace Banking.Storage
             {
                 throw new EntityNotFoundException();
             }
-            return accounts.Select(x=> new AccountView(x.AccountNumber,x.Balance, userId));
+            return accounts.Select(x=> new AccountView(x.Identifier,x.Balance, userId));
         }
         /// <inheritdoc/>
         public async Task<AccountView> GetAccount(string accountNumber)
         {
-            var account = await accountContext.Accounts.AsNoTracking().SingleOrDefaultAsync(x => x.AccountNumber == accountNumber);
+            var account = await accountContext.Accounts.AsNoTracking().SingleOrDefaultAsync(x => x.Identifier == accountNumber);
             if (account == null)
             {
                 throw new EntityNotFoundException();
             }
-            return new AccountView(account.AccountNumber, account.Balance, account.UserId);
+            return new AccountView(account.Identifier, account.Balance, account.UserId);
         }
 
         #endregion

@@ -7,11 +7,13 @@ namespace Banking.Domain
     /// </summary>
     public class Account : IEntity<string>
     {
+        //For EF to be able to map accountNumber to identifier
+        private Account() { }
         public Account(double balance, Guid userId, string accountNumber)
         {
             Balance = balance;
             UserId = userId;
-            AccountNumber = accountNumber;
+            Identifier = accountNumber;
             AccountValidator.ValidateBalance(balance);
         }
 
@@ -23,7 +25,7 @@ namespace Banking.Domain
         /// <summary>
         /// Unique account number
         /// </summary>
-        public string AccountNumber { get; }
+        public string Identifier { get; }
 
         /// <summary>
         /// Id of the user that account belongs to

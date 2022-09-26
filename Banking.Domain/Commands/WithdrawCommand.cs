@@ -14,7 +14,7 @@ namespace Banking.WebAPI.Commands
         }
 
         /// <summary>
-        /// AccountNumber of the account
+        /// Identifier of the account
         /// </summary>
         public string AccountNumber { get; }
 
