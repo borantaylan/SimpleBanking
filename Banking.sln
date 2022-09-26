@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Storage", "Banking.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Tests", "Banking.Tests\Banking.Tests.csproj", "{7C8ED3F7-A672-4DC6-BE27-6423FB91BBC5}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EDF3949D-6374-4702-8AB0-3AA7F57AAD4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7C8ED3F7-A672-4DC6-BE27-6423FB91BBC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C8ED3F7-A672-4DC6-BE27-6423FB91BBC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C8ED3F7-A672-4DC6-BE27-6423FB91BBC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF3949D-6374-4702-8AB0-3AA7F57AAD4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF3949D-6374-4702-8AB0-3AA7F57AAD4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF3949D-6374-4702-8AB0-3AA7F57AAD4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF3949D-6374-4702-8AB0-3AA7F57AAD4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
